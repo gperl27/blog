@@ -1,0 +1,29 @@
+- name: Movie Manager
+  description: 
+    A desktop gui using Rust and Elm that aims to alleviate the pain of clutter and organization of managing videos files locally in folders or external devices. It keeps track of your movie files and where they come from. The app provides the ability to search by filename and filter by origin folder.
+  url: https://github.com/gperl27/movie-manager
+  tags:
+    - Rust
+    - Elm
+- name: Symphonics
+  url: https://github.com/gperl27/symphonics2
+  description: A Google Chrome Extension built with React that translates any amount of arbitrary text into a musical composition on the fly.
+  tags:
+    - React
+    - JavaScript
+- name: Exercism.io Solutions
+  url: https://github.com/gperl27/exercism-challenges
+  description: Solutions to [exercism.io](https://exercism.io/)'s problem sets in Ruby, JavaScript, and Elixir.
+  tags:
+    - Ruby
+    - JavaScript
+    - Elixir
+- name: Youi
+  url: https://github.com/gperl27/youi
+  description:
+    Built during my Ironhack enrollment (2016), Youi is an experimental webapp that builds its own styles based on simple user inputs. It features a crowd-sourced homepage, custom styling templates, and an in-depth analytics platform.
+  
+  tags:
+    - Ruby
+    - JavaScript
+    - Postgres

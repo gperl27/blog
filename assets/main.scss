@@ -1,0 +1,12 @@
+---
+---
+@import "{{ site.theme }}";
+
+.centered {
+    margin: 0 auto;
+}
+
+ul.unstyled {
+    list-style-type: none;
+    margin-left: 0;
+}
