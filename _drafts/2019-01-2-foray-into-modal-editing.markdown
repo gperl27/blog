@@ -1,0 +1,27 @@
+---
+layout: post
+categories: vim vscode ide
+---
+- Intro
+  - saw how fast a coworker was navigating
+  - wanted to engage better with daily tooling
+- First Steps
+  - followed iterm/tmux terminal tutorial
+  - practiced vimtutor
+- Intermediate game
+  - found myself wanting better code sifting/sense
+  - better theming
+  - didn't like spending time with configuration
+- Vsvim
+  - loved modal editing but missed ide
+  - best of both worlds
+- Vsvim cons
+  - doesnt support vimrc file
+  - since emulated, not quite the same feel
+  - combo of vscode shortcuts plus vim commands is cool
+  - working with terminal
+    - C - a toggle remap
+- conclusion
+  - loving modal editing, weird typing normally elsewhere
+  - always learning, growing support of vsvim will only get better
+  - looked at Oni and spacemacs

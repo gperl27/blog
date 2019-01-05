@@ -18,11 +18,6 @@ This page denotes a selection of my favorite projects, all developed in my free 
     <p>
       {{ project.description | markdownify }}
     </p>
-    <!-- <ul>
-      {% for tag in project.tags %}
-        <li>{{ tag }}</li> 
-      {% endfor %}
-    </ul> -->
    </div>
   </li>
 {% endfor %}
