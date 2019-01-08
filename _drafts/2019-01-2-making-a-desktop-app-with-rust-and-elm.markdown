@@ -32,7 +32,28 @@ Cargo is Rust's package manager and is a powerful tool. Cargo can check your cod
 
 ## The Elm Bridge
 
-You might be asking, how will we actually interact with the app? 
+You might be thinking, how will we actually interact with the app? Well, I stumbled upon a library called webview(link) which supports two-way bindings between Rust and JavaScript. If you've ever used Electron, it's extremely similar to their IPCs, which allow you to pass messages from the frontend to the backend and visa-versa. The cool thing about using Rust is the ability to send and receive type-safe JSON; something you can't get out of the box with Electron. 
+
+Now, in the spirit of type-safety and reliablility, I opted in to using Elm(link) for the frontend. Elm is a typed, functional programming language. The Elm compilier is quite friendly and readable, aiding preventing runtime-errors (no `Cannot read property *blah* of undefined`). Lately, I've been using a ton of Ramda(link) in JavaScript, as well as dabbled with Elixir previously, so Elm was an excellent choice to satiate and improve my FP prowess. The learning curve wasn't too steep. It's lisp-like syntax was a bit off-putting at first, but I eventually got the hang of it; the biggest realization I had was how functions only accepted one argument only at a time and curried it to the next input. So, composing functions you had to do something like:
+
+```
+MyFunc1 (MyInnerFunc thisIsYourData)
+```
+
+Additionally, I thoroughly enjoyed the document-update-view model that they employ. If you come from using Redux (or most other Flux patterns) in your frontends, you'll feel right at home. 
+
+### Using Ports
+
+One thing that wasn't too straightforward was how to call vanilla JavaScript functions in Elm. Remember, the webview we're using doesn't communicate between Rust and Elm, but Rust and JavaScript. Luckily, Elm offers a way to send one-way messages through ports(link). Using ports, we can make a bridge that goes from Rust to JavaScript to Elm and back the other way.
+
+What this translates to is:
+
+- Backend to Frontend
+  - Rust => serialize into JSON => JavaScript/Elm port passes JSON through as a string => Elm deserializes JavaScript message
+
+- Frontend to Backend
+  - Elm serializes message into JSON => sends through a port => Rust deserialzes JavaScript Message
+
 
 - boscop's webview
   - port of go's
