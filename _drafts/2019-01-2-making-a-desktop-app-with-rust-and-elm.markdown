@@ -44,15 +44,19 @@ Additionally, I thoroughly enjoyed the document-update-view model that they empl
 
 ### Using Ports
 
-One thing that wasn't too straightforward was how to call vanilla JavaScript functions in Elm. Remember, the webview we're using doesn't communicate between Rust and Elm, but Rust and JavaScript. Luckily, Elm offers a way to send one-way messages through ports(link). Using ports, we can make a bridge that goes from Rust to JavaScript to Elm and back the other way.
+One thing that wasn't too straightforward was how to call vanilla JavaScript functions in Elm. Remember, the webview we're using doesn't communicate between Rust and Elm, but Rust and JavaScript. Luckily, Elm offers a way to send one-way messages through [ports](https://guide.elm-lang.org/interop/ports.html). Using ports, we can make a bridge that goes from Rust to JavaScript to Elm and back the other way.
 
 What this translates to is:
 
-- Backend to Frontend
-  - Rust => serialize into JSON => JavaScript/Elm port passes JSON through as a string => Elm deserializes JavaScript message
+#### Backend to Frontend
+  1. Rust serialize app state into JSON 
+  2. JavaScript port passes JSON through as a string to Elm
+  3. Elm deserializes JavaScript message
 
-- Frontend to Backend
-  - Elm serializes message into JSON => sends through a port => Rust deserialzes JavaScript Message
+#### Frontend to Backend
+  1. Elm serializes message into JSON 
+  2. Sends through a port 
+  3. Rust deserialzes JavaScript message
 
 ## Getting Things to Production
 
