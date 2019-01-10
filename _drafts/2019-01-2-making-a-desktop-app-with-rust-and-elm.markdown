@@ -49,7 +49,7 @@ One thing that wasn't too straightforward was how to call vanilla JavaScript fun
 What this translates to is:
 
 #### Backend to Frontend
-  1. Rust serialize app state into JSON 
+  1. Rust serializes app state into JSON 
   2. JavaScript port passes JSON through as a string to Elm
   3. Elm deserializes JavaScript message
 
